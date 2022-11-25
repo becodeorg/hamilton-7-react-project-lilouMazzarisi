@@ -1,7 +1,7 @@
 import { BiMinus } from 'react-icons/bi';
 import { BsPlus } from 'react-icons/bs';
 
-const Timer = ({ timer, breakTime, timeFormat }) => {
+const Timer = ({ timer, timeFormat, add, substract }) => {
 
     return (
         <div>
@@ -10,16 +10,16 @@ const Timer = ({ timer, breakTime, timeFormat }) => {
             </div>
             <button
                 className='btnMinus'
+                onClick={substract}
             >
                 <BiMinus />
             </button>
-            <button className='btnPlus'>
+            <button
+                className='btnPlus'
+                onClick={add}>
                 <BsPlus />
             </button>
-            {/* Break  */}
-            <div className='break'>
-                <span>{timeFormat(breakTime)}</span>
-            </div>
+
         </div>
     )
 }
