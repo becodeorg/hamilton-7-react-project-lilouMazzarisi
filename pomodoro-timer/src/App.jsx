@@ -1,7 +1,7 @@
 import Timer from "./components/Timer"
 import Buttons from "./components/Buttons"
 import Modal from "./components/Modal"
-import "./App.css";
+import "./index.css";
 
 import React, { useState, useEffect } from 'react';
 
@@ -32,10 +32,8 @@ function App() {
   }, [start, timer]);
 
   const reset = () => {
-    if (!start) {
-      setTimer(25 * 60);
-      setStart(start);
-    }
+    setTimer(25 * 60);
+    setStart(false);
   }
 
   const add = () => {
@@ -49,11 +47,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>PMDR TIMER</h1>
-      <Timer timer={timer} substract={substract} add={add} />
-      <Buttons start={start} toggle={toggle} reset={reset} />
-      {show && <Modal setShow={setShow} reset={reset} timer={timer} />}
+    <div className="App p-10">
+      <h1 className="text-3xl font-extrabold drop-shadow-xl">PMDR TIMER</h1>
+      <div className="flex flex-col items-center justify-between bg-gradient-to-b from-gray-300 to-transparent rounded-lg p-4 h-60">
+        <Timer timer={timer} substract={substract} add={add} />
+        <Buttons start={start} toggle={toggle} reset={reset} />
+        {show && <Modal setShow={setShow} reset={reset} timer={timer} />}
+      </div>
     </div >
   )
 }

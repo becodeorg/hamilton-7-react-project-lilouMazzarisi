@@ -13,24 +13,26 @@ const Timer = ({ timer, add, substract }) => {
         )
     }
     return (
-        <div>
-            <div className='timer'>
-                <span>
+        <div className='flex flex-col items-center justify-center gap-5 relative'>
+
+            <div className='timer border-8 rounded-full w-40 h-40 flex items-center justify-center'>
+                <span className='text-4xl '>
                     {timeFormat(timer)}
                 </span>
             </div>
-            <button
-                className='btnMinus'
-                onClick={substract}
-            >
-                <BiMinus />
-            </button>
-            <button
-                className='btnPlus'
-                onClick={add}>
-                <BsPlus />
-            </button>
-
+            <div className='flex justify-between absolute w-3/5 top-36'>
+                <button
+                    className='btnMinus basicBtn '
+                    onClick={substract}
+                >
+                    <BiMinus />
+                </button>
+                <button
+                    className='btnPlus basicBtn'
+                    onClick={add}>
+                    <BsPlus />
+                </button>
+            </div>
         </div>
     )
 }

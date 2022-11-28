@@ -63,6 +63,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.basicBtn {
+  @apply rounded-full w-8 h-8 p-1.5 bg-rose-300 drop-shadow-lg;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

@@ -2,7 +2,7 @@ const Modal = ({ timer, show, setShow, reset }) => {
     return (
         <div>
             <h3>Break Time!</h3>
-            <button
+            <button className="basicBtn"
                 onClick={() => { setShow(show) }}
             >
                 Close
