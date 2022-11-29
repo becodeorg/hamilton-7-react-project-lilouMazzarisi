@@ -64,7 +64,7 @@ button:focus-visible {
 }
 
 .basicBtn {
-  @apply rounded-full w-8 h-8 p-1.5 drop-shadow-lg bg-violet-600 text-zinc-800;
+  @apply rounded-full w-8 h-8 p-0 pl-[7px] drop-shadow-lg bg-violet-600 text-zinc-800;
 }
 
 .basicBtn:hover {

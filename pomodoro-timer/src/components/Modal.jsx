@@ -5,19 +5,19 @@ import { BiReset } from 'react-icons/bi';
 
 const Modal = ({ setShow, show, timeFormat, breakTimer, modalToggle, startBreak, resetModal, reset }) => {
     return (
-        <div className="bg-violet-700 absolute top-[100px] h-[345px] w-64 rounded-xl flex flex-col p-6 justify-between" >
+        <div className="bg-zinc-900 absolute top-[100px] h-[345px] w-64 rounded-xl flex flex-col p-6 justify-between" >
             <button className="basicBtn self-end"
                 onClick={() => { setShow(!show); reset() }}
             >
                 <VscClose />
             </button>
             <div className='pb-5'>
-                <h3>Time for a break!</h3>
+                <h3 className='text-violet-300 text-xl font-semibold'>Time for a break!</h3>
                 <p className='italic text-xs'>Press Play to start your break.</p>
             </div>
             <div>
                 <div className='flex gap-5 items-start justify-center pb-10'>
-                    <span className='text-5xl '>
+                    <span className='text-5xl text-violet-300 '>
                         {timeFormat(breakTimer)}
                     </span>
                     <div className='flex gap-1 items-baseline justify-between'>
