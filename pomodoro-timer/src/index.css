@@ -64,7 +64,12 @@ button:focus-visible {
 }
 
 .basicBtn {
-  @apply rounded-full w-8 h-8 p-1.5 bg-rose-300 drop-shadow-lg;
+  @apply rounded-full w-8 h-8 p-1.5 drop-shadow-lg bg-violet-600 text-zinc-800;
+}
+
+.basicBtn:hover {
+  border-color: transparent;
+  background-color: beige;
 }
 
 @media (prefers-color-scheme: light) {
