@@ -12,7 +12,7 @@ const Timer = ({ timer, add, substract, timeFormat }) => {
             </div>
             <div className='flex flex-col justify-between absolute h-[30%] top-[130px] left-[205px] '>
                 <button
-                    className='btnPlus basicBtn'
+                    className='btnPlus basicBtn '
                     onClick={add}>
                     <BsPlus />
                 </button>

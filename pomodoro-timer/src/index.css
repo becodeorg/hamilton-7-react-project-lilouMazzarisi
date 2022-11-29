@@ -51,25 +51,26 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .basicBtn {
-  @apply rounded-full w-8 h-8 p-0 pl-[7px] drop-shadow-lg bg-violet-600 text-zinc-800;
+  @apply rounded-full w-8 h-8 p-0 pl-[7px] shadow-violet-200 drop-shadow-lg text-violet-500;
 }
 
 .basicBtn:hover {
   border-color: transparent;
-  background-color: beige;
+  background-color: rgb(139, 92, 246);
+  color: rgb(22, 0, 41);
+  border: none;
+  outline: none;
+}
+
+.btnStart {
+  @apply bg-violet-500/70 text-violet-300 rounded-full drop-shadow-lg;
+}
+
+.btnReset {
+  @apply text-base w-8 h-8 p-0 pl-2 text-violet-500 rounded-full drop-shadow-lg;
 }
 
 @media (prefers-color-scheme: light) {

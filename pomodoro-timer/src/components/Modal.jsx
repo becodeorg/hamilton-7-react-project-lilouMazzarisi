@@ -5,7 +5,7 @@ import { BiReset } from 'react-icons/bi';
 
 const Modal = ({ setShow, show, timeFormat, breakTimer, modalToggle, startBreak, resetModal, reset }) => {
     return (
-        <div className="bg-zinc-900 absolute top-[100px] h-[345px] w-64 rounded-xl flex flex-col p-6 justify-between" >
+        <div className="bg-zinc-800 absolute top-[100px] h-[345px] w-64 rounded-xl flex flex-col p-6 justify-between" >
             <button className="basicBtn self-end"
                 onClick={() => { setShow(!show); reset() }}
             >
@@ -22,12 +22,12 @@ const Modal = ({ setShow, show, timeFormat, breakTimer, modalToggle, startBreak,
                     </span>
                     <div className='flex gap-1 items-baseline justify-between'>
                         <button
-                            className='btnReset drop-shadow-lg w-7 h-7 p-0 pl-2 text-xs text-violet-500 rounded-full focus:outline-0 border-0 focus:shadow-inner-xl'
+                            className='btnReset basicBtn'
                             onClick={resetModal}>
                             <BiReset />
                         </button>
                         <button
-                            className='btnStart drop-shadow-lg bg-violet-500/70 w-12 h-12 p-0 pl-3 text-2xl text-zinc-800 rounded-full focus:outline-0 border-0 focus:shadow-gray-800/50'
+                            className='btnStart w-12 h-12 p-0 pl-3 text-2xl'
                             onClick={modalToggle}>
                             {startBreak ? <BsPause /> : <VscDebugStart />}
                         </button>
@@ -37,7 +37,7 @@ const Modal = ({ setShow, show, timeFormat, breakTimer, modalToggle, startBreak,
                 <div className='flex gap-4 items-center justify-end pb-5'>
 
                     <button
-                        className='btnReset drop-shadow-lg text-violet-500 rounded-full focus:outline-0 border-0 focus:shadow-inner-xl'
+                        className='drop-shadow-lg text-violet-500 rounded-full focus:outline-0 border-0 focus:shadow-inner-xl'
                         onClick={() => { setShow(!show); reset() }}
                     >Back to work</button>
 
