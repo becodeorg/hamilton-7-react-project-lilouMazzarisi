@@ -7,7 +7,7 @@ import "./index.css";
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [timer, setTimer] = useState(3);// we set the timer to 25 times 60 seconds = 1500 seconds
+  const [timer, setTimer] = useState(25 * 60);// we set the timer to 25 times 60 seconds = 1500 seconds
   const [breakTimer, setBreakTimer] = useState(5 * 60);
   // start countdown with button
   const [start, setStart] = useState(false);
@@ -39,6 +39,7 @@ function App() {
   //countdown workTime - USE-INTERVAL
   useInterval(() => {
     let interval = null;
+    console.log(start)
     if (start && timer > 0) {
       interval = setTimer(timer => timer - 1);
     } else if (!start && timer !== 0) {
