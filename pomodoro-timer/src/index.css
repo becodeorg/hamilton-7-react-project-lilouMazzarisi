@@ -73,6 +73,7 @@ button {
   @apply text-base w-8 h-8 p-0 pl-2 text-violet-500 rounded-full drop-shadow-lg;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

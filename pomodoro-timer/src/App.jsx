@@ -4,7 +4,7 @@ import Modal from "./components/Modal"
 import useInterval from 'use-interval'
 import "./index.css";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function App() {
   const [timer, setTimer] = useState(25 * 60);// we set the timer to 25 times 60 seconds = 1500 seconds
