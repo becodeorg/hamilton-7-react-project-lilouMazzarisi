@@ -1,6 +1,7 @@
 import Timer from "./components/Timer"
 import Buttons from "./components/Buttons"
 import Modal from "./components/Modal"
+import useInterval from 'use-interval'
 import "./index.css";
 
 import React, { useState, useEffect } from 'react';
@@ -34,33 +35,58 @@ function App() {
     setStartBreak(!startBreak); // start -> true x
 
   }
-  // countdown worktime
-  useEffect(() => {
+
+  //countdown workTime - USE-INTERVAL
+  useInterval(() => {
     let interval = null;
     if (start && timer > 0) {
-      interval = setInterval(() => {
-        setTimer(timer => timer - 1);
-      }, 1000);
+      interval = setTimer(timer => timer - 1);
     } else if (!start && timer !== 0) {
       clearInterval(interval);
     } else if (timer === 0) {
-      setShow(!show);
-      console.log(show)
+      setShow(true);
+      setStart(false);
     }
-    return () => clearInterval(interval);
-  }, [start, timer]);
+  }, 1000);
 
-  useEffect(() => {
+  //countdown breakTime - USE-INTERVAL
+  useInterval(() => {
     let interval = null;
     if (startBreak && breakTimer > 0) {
-      interval = setInterval(() => {
-        setBreakTimer(breakTimer => breakTimer - 1);
-      }, 1000);
-    } else if (!startBreak && timer !== 0) {
+      interval = setBreakTimer(breakTimer => breakTimer - 1);
+    } else if (!startBreak && breakTimer !== 0) {
       clearInterval(interval);
     }
-    return () => clearInterval(interval);
-  }, [startBreak, breakTimer]);
+  }, 1000);
+
+  // countdown workTime - USE-EFFECT
+  // useEffect(() => {
+  //   let interval = null;
+  //   if (start && timer > 0) {
+  //     interval = setInterval(() => {
+  //       setTimer(timer => timer - 1);
+  //     }, 1000);
+  //   } else if (!start && timer !== 0) {
+  //     clearInterval(interval);
+  //   } else if (timer === 0) {
+  //     setShow(!show);
+  //     console.log(show)
+  //   }
+  //   return () => clearInterval(interval);
+  // }, [start, timer]);
+
+  // countdown breakTime - USE-EFFECT
+  // useEffect(() => {
+  //   let interval = null;
+  //   if (startBreak && breakTimer > 0) {
+  //     interval = setInterval(() => {
+  //       setBreakTimer(breakTimer => breakTimer - 1);
+  //     }, 1000);
+  //   } else if (!startBreak && timer !== 0) {
+  //     clearInterval(interval);
+  //   }
+  //   return () => clearInterval(interval);
+  // }, [startBreak, breakTimer]);
 
   const reset = () => {
     setTimer(25 * 60);
