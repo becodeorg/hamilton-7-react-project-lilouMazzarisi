@@ -7,7 +7,7 @@ const Timer = ({ timer, add, substract, timeFormat }) => {
         <div className='flex flex-col items-center justify-center gap-5 relative p-8'>
             <h2>Worktime</h2>
             <div className='timer'>
-                <div className='circle border-4 border-violet-500/50 rounded-full w-48 h-48 flex text-violet-300 shadow-inner items-center justify-center absolute'>
+                <div className='circle border-4 border-violet-500 rounded-full w-48 h-48 flex text-violet-300 shadow-inner items-center justify-center absolute'>
                     <span className='text-5xl'>
                         {timeFormat(timer)}
                     </span>
